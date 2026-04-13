@@ -25,7 +25,7 @@ The core research question addressed is:
 |---|---|---|---|
 | **Meta LLaMA 2** | 8B | Transformer (decoder-only) | Meta AI |
 | **Meta LLaMA 3** | 8B | Transformer (decoder-only) | Meta AI |
-| **NVIDIA Minitron** | 4B | Transformer (decoder-only) | NVIDIA |
+| **NVIDIA Nemotron-Mini 4B** | 4B | Transformer (decoder-only) | NVIDIA |
 
 All models were fine-tuned using **QLoRA**, enabling 4-bit quantization with low-rank adapter layers to drastically reduce VRAM requirements without significant performance degradation.
 
@@ -332,7 +332,7 @@ Comparative evaluation across the three models on the held-out test set:
 |---|---|---|---|---|---|
 | LLaMA 2 8B (fine-tuned) | 8 | 0.36 | 0.15 | 0.23 | 0.27|
 | LLaMA 3 8B (fine-tuned) | 16.9| 0.35 | 0.2| 0.27 | 0.22 |
-| Minitron 4B (fine-tuned) | 4.3 | 0.26 | 0.08 | 0.15 | 0.23 |
+| Nemotron-Mini 4B (fine-tuned) | 4.3 | 0.26 | 0.08 | 0.15 | 0.23 |
 
 ---
 
@@ -340,7 +340,7 @@ Comparative evaluation across the three models on the held-out test set:
 
 - **QLoRA** proved highly effective for fine-tuning large models (7–8B parameters) on consumer-grade GPUs with minimal quality degradation compared to full fine-tuning.
 - **LLaMA 3 8B** demonstrated the strongest overall performance across all NLP benchmarks due to its improved instruction-following capabilities over its predecessor.
-- **NVIDIA Minitron 4B**, despite having roughly half the parameters of the LLaMA models, achieved competitive scores — validating smaller, distilled architectures as viable options under tight compute budgets.
+- **NVIDIA Nemotron-Mini 4B**, despite having roughly half the parameters of the LLaMA models, achieved competitive scores — validating smaller, distilled architectures as viable options under tight compute budgets.
 - Open-source LLMs fine-tuned on domain-specific data represent a **cost-effective and reproducible** alternative to proprietary APIs (e.g., GPT-4, Claude) for educational content generation.
 
 ---
@@ -373,6 +373,6 @@ Contributions, issues, and feature requests are welcome. Please open an issue fi
 
 - [Hugging Face](https://huggingface.co/) for the `transformers`, `peft`, `trl`, and `datasets` libraries
 - [Meta AI](https://ai.meta.com/) for open-sourcing the LLaMA 2 and LLaMA 3 model families
-- [NVIDIA](https://www.nvidia.com/en-us/ai/) for the Minitron model family
+- [NVIDIA](https://www.nvidia.com/en-us/ai/) for the Nemotron model family
 - [Tim Dettmers et al.](https://arxiv.org/abs/2305.14314) for the original QLoRA paper
 - The open-source NLP community for evaluation tooling (`sacrebleu`, `rouge-score`, `nltk`)
