@@ -41,7 +41,7 @@ All models were fine-tuned using **QLoRA**, enabling 4-bit quantization with low
 ### Task Formulation
 The models were trained on a **supervised seq2seq** style task:
 - **Input**: A passage or topic context
-- **Output**: A structured Q&A pair (question + answer)
+- **Output**: A structured Q&A pair (question + answers)
 
 ### Dataset
 - Curated educational text passages with corresponding question-answer annotations
